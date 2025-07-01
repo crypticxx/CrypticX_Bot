@@ -24,15 +24,14 @@ render.yaml     - Render.com auto-deploy config
 
 ## 🛠 .env (for `/server`)
 ```
-MONGO_URI=your_mongodb_connection_string
-BASE_RPC_URL=https://base-sepolia...
-ETHEREUM_RPC_URL=https://mainnet.infura.io/v3/...
-POLYGON_RPC_URL=https://polygon-rpc.com
-OPENAI_API_KEY=sk-...
-TWILIO_ACCOUNT_SID=...
-TWILIO_AUTH_TOKEN=...
-ENCRYPTION_KEY=32charlongpassword1234567890
-```
+const mongoUri = process.env.MONGO_URI;
+const baseRpc = process.env.BASE_RPC_URL;
+const ethereumRpc = process.env.ETHEREUM_RPC_URL;
+const polygonRpc = process.env.POLYGON_RPC_URL;
+const openaiKey = process.env.OPENAI_API_KEY;
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+const encryptionKey = process.env.ENCRYPTION_KEY;
 
 ## 🚀 Deployment
 1. Push this repo to GitHub
