@@ -32,8 +32,4 @@ const openaiKey = process.env.OPENAI_API_KEY;
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const encryptionKey = process.env.ENCRYPTION_KEY;
-
-## 🚀 Deployment
-1. Push this repo to GitHub
-2. Connect to Render.com
-3. It auto-detects `render.yaml` and deploys both frontend and backend
+```
