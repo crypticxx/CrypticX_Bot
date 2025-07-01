@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: crypto-bot-server
+    env: node
+    buildCommand: cd server && npm install
+    startCommand: node index.js
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: BASE_RPC_URL
+        sync: false
+      - key: ETHEREUM_RPC_URL
+        sync: false
+      - key: POLYGON_RPC_URL
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: ENCRYPTION_KEY
+        sync: false
+
+  - type: web
+    name: crypto-bot-dashboard
+    env: static
+    buildCommand: cd client && npm install && npm run build
+    staticPublishPath: client/dist
